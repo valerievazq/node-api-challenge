@@ -23,7 +23,7 @@ router.get("/:id", validateProjectId, (req, res) => {
   projects.get(req.params.id).then((project) => {
     if (!project) {
       res.status(404).json({
-        errorMessage: "The user with the specified ID does not exist.",
+        errorMessage: "The project with the specified ID does not exist.",
       });
     } else {
       res.status(200).json(project);
